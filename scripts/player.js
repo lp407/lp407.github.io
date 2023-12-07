@@ -1,7 +1,3 @@
-function mouseWheel(){
-  player.speed += event.delta/100;
-}
-
 class Player{
     constructor(){
       this.playerCamera = createCamera();
