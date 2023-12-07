@@ -1,11 +1,14 @@
 function drawLandscape(){
   if (gui.drawTerrainCheckbox.checked()){
     push();
-      translate(0 + worldOffset.x, 1003 + worldOffset.y, 0 + worldOffset.z);
+      translate(0, 2000 + worldOffset.y, 0);
       rotateX(PI/2);
       shader(landscapeShader);
       landscapeShader.setUniform('uTexture', noisetxt);
-      plane(9000);
+      landscapeShader.setUniform('uBox', gui.drawBox.checked() ? true : false);
+      landscapeShader.setUniform('uWorldOffset', [worldOffset.x, worldOffset.y, worldOffset.z]);
+      landscapeShader.setUniform('uPlayerSpeed', gui.playerSpeed.value());
+      plane(9000, 9000 ,600, 600);
     pop();
   }
 }

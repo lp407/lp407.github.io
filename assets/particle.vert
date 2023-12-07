@@ -60,9 +60,10 @@ void main(){
     vVertTexCoord = aTexCoord;
     vNormal = normalize(aNormal);
 
-    vec3 normal = normalize(vec3( uNormalMatrix * aNormal ));
+    // vec3 normal = normalize(vec3( uNormalMatrix * aNormal ));
     // normal = displace(vec4(normal, 1.0)).xyz;
     // vNormal = normal;
+    
     positionVec4 = displace(positionVec4);
 
     vPosition = positionVec4.xyz;
