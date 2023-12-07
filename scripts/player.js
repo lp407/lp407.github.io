@@ -6,7 +6,7 @@ class Player{
       this.forwards = createVector(1, 0, 0);
       // this is necessary in order to get the fresnel effect as p5 combines ModelViewMatrix
       this.modelMatrix = new p5.Matrix;
-      this.modelMatrix.set([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]);
+      this.modelMatrix.set([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -90, 120, 0, 1]);
       this.shader = playerShader;
     }
     resetCamera(){
